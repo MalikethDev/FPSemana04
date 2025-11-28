@@ -2,7 +2,7 @@ import json
 
 def load_data(filename):
     try:
-        with open(filename, "r", encoding="utf-8") as file:
+        with open(filename, "rt", encoding="utf-8") as file:
             content = file.read().strip()   # lê e remove espaços em branco
 
     # Ficheiro não encontrado
@@ -12,7 +12,7 @@ def load_data(filename):
 
     # Ficheiro vazio
     if content == "":
-        print("Erro: Ficheiro Vazio")
+        print("Erro: Ficheiro Vazio!")
         return None
     
     # Json inválido
